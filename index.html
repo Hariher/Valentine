@@ -3,15 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hogwarts Owl Post</title>
+<title>Ministry of Magic – Valentine Decree</title>
 
 <style>
 :root{
-  --night:#070614;
-  --purple:#1b1140;
-  --parchment:#f3e7c6;
+  --gold:#e0c36e;
   --ink:#2a1a10;
-  --gold:#d6b35c;
+  --parchment:#f6e8c8;
   --red:#7a0f19;
 }
 
@@ -23,69 +21,54 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:20px;
-  background:
-    radial-gradient(900px 600px at 20% 10%, #3b1d6b, transparent 60%),
-    radial-gradient(800px 500px at 80% 30%, #2a1f5b, transparent 55%),
-    linear-gradient(180deg, var(--night), var(--purple));
+  padding:18px;
   font-family: Georgia, "Times New Roman", serif;
-}
+  color:var(--ink);
 
-.stars{
-  position:fixed;
-  inset:0;
   background:
-    radial-gradient(2px 2px at 20px 30px, #fff, transparent 60%),
-    radial-gradient(1px 1px at 140px 180px, #fff, transparent 60%),
-    radial-gradient(2px 2px at 300px 80px, #fff, transparent 60%),
-    radial-gradient(1px 1px at 600px 240px, #fff, transparent 60%);
-  background-size:1000px 400px;
-  opacity:.35;
-  animation: drift 25s linear infinite;
-  pointer-events:none;
-}
-
-@keyframes drift{
-  from{transform:translateX(0)}
-  to{transform:translateX(-200px)}
+    linear-gradient(rgba(10,6,30,.75), rgba(10,6,30,.85)),
+    url("https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=1600&q=80");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
 }
 
 .letter{
-  width:min(820px,100%);
-  background:linear-gradient(180deg, var(--parchment), #ead9a9);
-  border-radius:18px;
-  padding:32px 26px;
-  box-shadow:0 30px 90px rgba(0,0,0,.6);
+  width:min(900px,100%);
+  background:linear-gradient(180deg, var(--parchment), #ecd9a6);
+  border-radius:20px;
+  padding:34px 30px;
+  box-shadow:0 40px 120px rgba(0,0,0,.75);
   position:relative;
 }
 
 .letter::before{
   content:"";
   position:absolute;
-  inset:-30px;
+  inset:-40px;
   background:
-    radial-gradient(120px 80px at 20% 10%, rgba(0,0,0,.06), transparent 60%),
+    radial-gradient(160px 90px at 20% 10%, rgba(0,0,0,.06), transparent 60%),
     repeating-linear-gradient(0deg, rgba(0,0,0,.02) 0 2px, transparent 2px 6px);
   pointer-events:none;
 }
 
 .header{
   display:flex;
-  gap:16px;
+  gap:18px;
   align-items:center;
 }
 
 .seal{
-  width:58px;
-  height:58px;
+  width:62px;
+  height:62px;
   border-radius:50%;
   background:radial-gradient(circle at 30% 30%, #a01622, var(--red));
   display:grid;
   place-items:center;
   color:#fff;
-  font-weight:800;
-  font-size:26px;
-  box-shadow:0 8px 20px rgba(0,0,0,.4);
+  font-weight:900;
+  font-size:28px;
+  box-shadow:0 10px 25px rgba(0,0,0,.45);
 }
 
 .header-text{
@@ -94,36 +77,38 @@ body{
 }
 
 h1{
-  text-align:right;
-  margin:0;
+  margin-left:auto;
   font-size:22px;
-  letter-spacing:.12em;
+  letter-spacing:.14em;
 }
 
 hr{
   border:none;
   height:1px;
-  background:linear-gradient(90deg, transparent, rgba(0,0,0,.3), transparent);
+  background:linear-gradient(90deg, transparent, rgba(0,0,0,.35), transparent);
   margin:22px 0;
 }
 
 p{
   font-size:18px;
-  line-height:1.55;
-  color:rgba(30,18,10,.92);
+  line-height:1.6;
+}
+
+.flirty{
+  font-style:italic;
 }
 
 .spell{
-  margin:18px 0;
-  padding:14px;
-  background:rgba(214,179,92,.15);
-  border:1px solid rgba(214,179,92,.45);
-  border-radius:14px;
+  margin:20px 0;
+  padding:16px;
+  background:rgba(224,195,110,.18);
+  border:1px solid rgba(224,195,110,.5);
+  border-radius:16px;
 }
 
 .buttons{
   display:flex;
-  gap:16px;
+  gap:18px;
   justify-content:center;
   margin-top:26px;
   position:relative;
@@ -131,74 +116,84 @@ p{
 
 button{
   border:none;
-  border-radius:14px;
-  padding:14px 20px;
-  font-size:16px;
-  font-weight:700;
+  border-radius:16px;
+  padding:16px 24px;
+  font-size:17px;
+  font-weight:800;
   cursor:pointer;
   transition:transform .15s ease;
 }
 
 #yes{
-  background:linear-gradient(180deg, #f2d37c, var(--gold));
+  background:linear-gradient(180deg, #f4da8a, var(--gold));
   color:#2a1a10;
+  box-shadow:0 16px 32px rgba(0,0,0,.35);
 }
 
-#yes:hover{transform:translateY(-2px)}
+#yes:hover{
+  transform:translateY(-3px);
+}
 
 #no{
-  background:#c7c7c7;
+  background:#cfcfcf;
   color:#555;
   cursor:not-allowed;
   position:relative;
 }
 
 .signature{
-  margin-top:28px;
+  margin-top:30px;
   display:flex;
   justify-content:space-between;
   flex-wrap:wrap;
+  align-items:flex-end;
 }
 
 .name{
-  font-family:"Brush Script MT", "Apple Chancery", cursive;
-  font-size:30px;
+  font-family:"Brush Script MT","Apple Chancery",cursive;
+  font-size:32px;
 }
 
 .modal{
   position:fixed;
   inset:0;
-  background:rgba(0,0,0,.6);
+  background:rgba(0,0,0,.7);
   display:none;
   align-items:center;
   justify-content:center;
+  z-index:10;
 }
 
 .modal.open{display:flex}
 
 .modal-card{
-  background:linear-gradient(180deg, #120b2a, #070614);
+  background:
+    linear-gradient(rgba(10,6,30,.9), rgba(10,6,30,.95)),
+    url("https://images.unsplash.com/photo-1503437313881-503a91226402?auto=format&fit=crop&w=1200&q=80");
+  background-size:cover;
+  background-position:center;
   color:#fff;
-  padding:26px;
-  border-radius:18px;
+  padding:30px;
+  border-radius:20px;
   text-align:center;
-  max-width:520px;
-  box-shadow:0 30px 90px rgba(0,0,0,.7);
+  max-width:560px;
+  box-shadow:0 40px 120px rgba(0,0,0,.8);
 }
 
 .spark{
   position:fixed;
-  width:10px;
-  height:10px;
+  width:12px;
+  height:12px;
   background:radial-gradient(circle, #ffd98a, transparent 70%);
   border-radius:50%;
   pointer-events:none;
   animation:pop 900ms forwards;
+  z-index:11;
 }
 
 @keyframes pop{
   to{
-    transform:translate(var(--dx), var(--dy)) scale(1.5);
+    transform:translate(var(--dx), var(--dy)) scale(1.6);
     opacity:0;
   }
 }
@@ -206,90 +201,96 @@ button{
 </head>
 
 <body>
-<div class="stars"></div>
 
 <div class="letter">
   <div class="header">
     <div class="seal">H</div>
     <div class="header-text">
-      HOGWARTS SCHOOL OF WITCHCRAFT & WIZARDRY<br>
-      Owl Post • Confidential
+      MINISTRY OF MAGIC<br>
+      Department of Extremely Important Romantic Affairs
     </div>
-    <h1>OFFICIAL NOTICE</h1>
+    <h1>OFFICIAL DECREE</h1>
   </div>
 
   <hr>
 
-  <p><b>Dear Ruheen F. Charania,</b></p>
+  <p><b>Dear Miss Ruheen F. Charania,</b></p>
 
   <p>
-    By order of the Ministry of Magic, this letter has been delivered to inform you
-    of a matter of great importance.
+    It has come to the Ministry’s attention that you are
+    <b>unreasonably attractive</b>, dangerously charming,
+    and in possession of a smile capable of disrupting the balance of the wizarding world.
+  </p>
+
+  <p class="flirty">
+    After consulting the Sorting Hat, three Hogwarts ghosts,
+    and my extremely biased heart, a decision has been reached.
   </p>
 
   <p>
-    You have been officially selected to be <b>my Valentine</b>.
-    This decision has been reviewed by the Headmaster, destiny itself,
-    and several extremely biased witnesses.
+    You are hereby <b>legally, magically, and emotionally required</b>
+    to be my Valentine.
   </p>
 
   <div class="spell">
-    <b>Spell Invoked:</b> <i>Accio Valentine</i><br>
-    Side effects include smiling uncontrollably, unforgettable memories,
-    and me being ridiculously proud to call you mine.
+    <b>Spells Activated:</b><br>
+    • <i>Accio Date Night</i><br>
+    • <i>Expecto Butterflies</i><br>
+    • <i>Permanent Smile Charm</i>
   </div>
 
   <p>
-    Please confirm your acceptance below.
-    (Note: Declinations have been… mysteriously enchanted.)
+    Attempts to decline have been reviewed and immediately rejected
+    by ancient Hogwarts magic. Please choose wisely.
   </p>
 
   <div class="buttons">
     <button id="yes">Yes, obviously 🪄</button>
-    <button id="no" disabled>No</button>
+    <button id="no">No (good luck)</button>
   </div>
 
   <div class="signature">
     <div>
-      Yours, unquestionably,<br>
+      Yours Idiot<br>
       <span class="name">Hariher</span>
     </div>
     <div style="font-size:12px;opacity:.65">
-      Sealed with magic • Tampering detected
+      Sealed with magic • Tampering monitored by Hogwarts
     </div>
   </div>
 </div>
 
 <div class="modal" id="modal">
   <div class="modal-card">
-    <h2>It’s official 🪄</h2>
+    <h2>Decision Recorded 🪄</h2>
     <p>
-      Hogwarts has recorded your acceptance.<br>
-      Now we plan the date.
+      Hogwarts has officially logged your acceptance.<br>
+      Now text me and tell me what kind of Valentine chaos we’re creating.
     </p>
     <button onclick="closeModal()">Close</button>
   </div>
 </div>
 
 <script>
-const yes = document.getElementById("yes");
-const no = document.getElementById("no");
-const modal = document.getElementById("modal");
+const yes=document.getElementById("yes");
+const no=document.getElementById("no");
+const modal=document.getElementById("modal");
 
-no.addEventListener("mouseenter", () => {
-  const x = Math.random()*160 - 80;
-  const y = Math.random()*120 - 60;
-  no.style.transform = `translate(${x}px, ${y}px)`;
+no.addEventListener("mouseenter",()=>{
+  const x=Math.random()*200-100;
+  const y=Math.random()*140-70;
+  no.style.transform=`translate(${x}px,${y}px)`;
+  no.textContent="Nice try 😌";
 });
 
-yes.addEventListener("click", e => {
-  for(let i=0;i<20;i++){
+yes.addEventListener("click",e=>{
+  for(let i=0;i<30;i++){
     const s=document.createElement("div");
     s.className="spark";
     s.style.left=e.clientX+"px";
     s.style.top=e.clientY+"px";
-    s.style.setProperty("--dx",(Math.random()*200-100)+"px");
-    s.style.setProperty("--dy",(Math.random()*200-120)+"px");
+    s.style.setProperty("--dx",(Math.random()*260-130)+"px");
+    s.style.setProperty("--dy",(Math.random()*240-160)+"px");
     document.body.appendChild(s);
     setTimeout(()=>s.remove(),900);
   }
@@ -300,5 +301,6 @@ function closeModal(){
   modal.classList.remove("open");
 }
 </script>
+
 </body>
 </html>
